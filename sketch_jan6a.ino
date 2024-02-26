@@ -100,6 +100,7 @@ void linefollow() {
   if (numSensors == 8) {
     // error = (3 * sensorValue[0] + 2 * sensorValue[1] + sensorValue[2] - sensorValue[5] - 2 * sensorValue[6] - 3 * sensorValue[7]);
     error = ( 1.5 * sensorValue[1] + 1.0 * sensorValue[2] - 1.0 * sensorValue[5] - 1.5 * sensorValue[6]);
+    error=error*3/4;
   }
   if (lineThickness > 22) {
     error = error * -1;
